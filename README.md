@@ -1,2 +1,2 @@
-# Impressed-Movie
-App programming project that shows list of impressed movies
+# Trip
+앱 프로그래밍 수업 프로젝트
