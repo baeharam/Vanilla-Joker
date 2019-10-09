@@ -1,14 +1,14 @@
 {
-  "name": "impressed-movie",
+  "name": "vanilla-joker",
   "version": "1.0.0",
-  "description": "List of impressed movies",
+  "description": "Joker Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baeharam/Impressed-Movie.git"
+    "url": "git+https://github.com/baeharam/Vanilla-Joker.git"
   },
   "keywords": [
     "movie"
@@ -16,14 +16,11 @@
   "author": "Haram Bae",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baeharam/Impressed-Movie/issues"
+    "url": "https://github.com/baeharam/Vanilla-Joker/issues"
   },
-  "homepage": "https://github.com/baeharam/Impressed-Movie#readme",
-  "devDependencies": {
-    "fullpage.js": "^3.0.7"
-  },
+  "homepage": "https://github.com/baeharam/Vanilla-Joker#readme",
+  "devDependencies": {},
   "dependencies": {
-    "fslightbox": "^2.0.1",
-    "lightgallery.js": "^1.1.3"
+    "fslightbox": "^2.0.1"
   }
 }
