@@ -1,66 +1,10 @@
-.movie:nth-child(1) { background-image: url('../images/movie1-bg.jpg'); }
-.movie:nth-child(2) { background-image: url('../images/movie2-bg.jpg'); }
-
-.movie {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-}
-
-.movie__main {
-  width: 600px;
-  position: absolute;
-  left: 10%;
-  top: 20%;
-}
-.movie__title {
-  font-family: 'Alfa Slab One', cursive;
-  font-size: 60px;
-  font-weight: 200;
-  color: white;
-  margin-bottom: 30px;
-}
-.movie__desc {
-  font-family: 'EB Garamond', serif;
-  font-size: 20px;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.5;
-}
-.movie__aside {
-  margin-left: auto;
-  width: 25%;
-  height: 100%;
-  border-left: 2px solid rgba(255,255,255,0.5);
-  padding: 40px 30px;
-  color: rgba(255,255,255,0.8);
-}
-.movie__info h3 {
-  font-family: 'Alfa Slab One', cursive;
-  font-weight: 200;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-.movie__info p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  margin-bottom: 50px;
-}
-.movie:nth-child(1) .movie__video { background-image: url('../images/movie1-video.jpg'); }
-.movie:nth-child(2) .movie__video { background-image: url('../images/movie2-video.jpg'); }
-.movie__video {
-  display: block;
-  border: 1px solid white;
-  border-radius: 5px;
-  overflow: hidden;
+#main {
   position: relative;
-  padding-top: 56.25%;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 100vh;
+  background: url('../images/home.jpg') no-repeat center;
   background-size: cover;
-  cursor: pointer;
 }
-.movie__video:after {
+#main:after {
   content: " ";
   position: absolute;
   left: 0;
@@ -68,30 +12,48 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.2;
 }
-.movie__video__cover {
+.main__inside h1 {
   position: absolute;
-  z-index: 2;
-  top: 50%;
+  z-index: 1;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.movie__video__cover p {
-  font-family: 'Alfa Slab One', cursive;
-  font-weight: 200;
+  bottom: 10%;
+  transform: translateX(-50%);
   color: white;
-  font-size: 30px;
+  font-family: 'Coluna';
+  font-size: 200px;
+  text-shadow: 0 10px 5px black;
+}
+.main__inside h1:after {
+  content: 'JOAQUIN PHOENIX';
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair', serif;
+  font-size: 0.2em;
   white-space: nowrap;
-  margin-bottom: 5px;
-}
-.movie__video__cover i {
-  color: white;
+  text-shadow: none;
+  font-weight: 200;
+  color: whitesmoke;
 }
 
-
-/* Modal Video */
-video {
-  border-radius: 5px;
+.aside__inside {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
+.aside__inside nav { float: left; }
+.aside__inside nav ul li { float: left; }
+.aside__inside nav ul li a {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 20px;
+}
+.aside__inside nav ul li a img {
+  width: 36px;
+  height: 36px;
+}
+.aside__inside nav ul li a:last-child { margin-right: 0; }
