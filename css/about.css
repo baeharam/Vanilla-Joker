@@ -16,8 +16,8 @@
   opacity: 0.2;
 }
 #main.overlay { overflow: visible; }
-#main.overlay .real-synopsis,
-#main.overlay .real-synopsis-wrapper {
+#main.overlay .synopsis__inside,
+#main.overlay .synopsis {
   display: block;
   z-index: 4;
 }
@@ -53,7 +53,7 @@
 .intro__component.intro__actor { animation: 1s fadeInUp 0.6s both; }
 .intro__component.intro__synopsis { animation: 1s fadeInUp 0.9s both; }
 
-.real-synopsis-wrapper {
+.synopsis {
   position: relative;
   background-color: black;
   width: 100%;
@@ -61,22 +61,22 @@
   display: none;
 }
 
-.real-synopsis {
+.synopsis__inside {
   width: 80%;
   margin: 0 auto;
   text-align: center;
   color: white;
   display: none;
 }
-.real-synopsis h2 {
+.synopsis__inside h2 {
   font-size: 50px;
   padding: 20px 0;
 }
-.real-synopsis p {
+.synopsis__inside p {
   font-size: 20px;
   line-height: 2;
 }
-.real-synopsis span {
+.synopsis__inside span {
   position: absolute;
   right: 5%;
   top: 0;
