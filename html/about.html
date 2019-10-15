@@ -21,7 +21,7 @@
     <div class="l-wrapper">
       <div class="header__inside clearfix">
         <nav>
-          <ul class="clearfix">
+          <ul class="header__menu clearfix">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./trailer.html">Trailers</a></li>
@@ -32,55 +32,57 @@
   </header>
   <main id="main">
     <div class="l-wrapper">
-      <section class="intro">
-        <div class="intro__component intro__director">
-          <h2>Director</h2>
-          <p>Todd Phillips</p>
-        </div>
-        <div class="intro__component intro__date">
-          <h2>Released Date</h2>
-          <p>2 October 2019</p>
-        </div>
-        <div class="intro__component intro__actor">
-          <h2>Actors</h2>
-          <p>Joaquin Phoenix, Robert De Niro, Zazie Beetz</p>
-        </div>
-        <div class="intro__component intro__synopsis">
-          <h2>Synopsis</h2>
-          <p>
-            Gotham City, 1981
-            Arthur Fleck (Joaquin Phoenix) works as a clown-for-hire for a company called Ha-Ha's. 
-            He is tasked with advertising a store by dancing and waving a sign around. 
-            The sign gets snatched by a group of punk teens, forcing Arthur to chase them 
-            into an alley. They smash the sign against his face and proceed to mercilessly 
-            kick him while he's down. In this era, Gotham is struggling with crime, 
-            unemployment, and poverty. Arthur visits a social...
-            <span class="intro__synopsis__more">more</span>
-          </p>
-        </div>
-      </section>
-      <section class="gallery">
-        <ul class="l-row">
-          <li class="l-col">
-            <a data-fslightbox="gallery" class="gallery__item gallery__item--1" href="../images/gallery1.jpg"></a>
-          </li>
-          <li class="l-col">
-            <a data-fslightbox="gallery" class="gallery__item gallery__item--2" href="../images/gallery2.jpg"></a>
-          </li>
-          <li class="l-col">
-            <a data-fslightbox="gallery" class="gallery__item gallery__item--3" href="../images/gallery3.jpg"></a>
-          </li>
-          <li class="l-col">
-            <a data-fslightbox="gallery" class="gallery__item gallery__item--4" href="../images/gallery4.jpg"></a>
-          </li>
-          <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery5.jpg"></a>
-          <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery6.jpg"></a>
-          <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery7.jpg"></a>
-          <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery8.jpg"></a>
-          <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery9.jpg"></a>
-          <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery10.jpg"></a>
-        </ul>
-      </section>
+      <div class="main__inside clearfix">
+        <section class="intro">
+          <div class="intro__component intro__director">
+            <h2>Director</h2>
+            <p>Todd Phillips</p>
+          </div>
+          <div class="intro__component intro__date">
+            <h2>Released Date</h2>
+            <p>2 October 2019</p>
+          </div>
+          <div class="intro__component intro__actor">
+            <h2>Actors</h2>
+            <p>Joaquin Phoenix, Robert De Niro, Zazie Beetz</p>
+          </div>
+          <div class="intro__component intro__synopsis">
+            <h2>Synopsis</h2>
+            <p>
+              Gotham City, 1981
+              Arthur Fleck (Joaquin Phoenix) works as a clown-for-hire for a company called Ha-Ha's. 
+              He is tasked with advertising a store by dancing and waving a sign around. 
+              The sign gets snatched by a group of punk teens, forcing Arthur to chase them 
+              into an alley. They smash the sign against his face and proceed to mercilessly 
+              kick him while he's down. In this era, Gotham is struggling with crime, 
+              unemployment, and poverty. Arthur visits a social...
+              <span class="intro__synopsis__more">more</span>
+            </p>
+          </div>
+        </section>
+        <section class="gallery">
+          <ul class="l-row">
+            <li class="l-col">
+              <a data-fslightbox="gallery" class="gallery__item gallery__item--1" href="../images/gallery1.jpg"></a>
+            </li>
+            <li class="l-col">
+              <a data-fslightbox="gallery" class="gallery__item gallery__item--2" href="../images/gallery2.jpg"></a>
+            </li>
+            <li class="l-col">
+              <a data-fslightbox="gallery" class="gallery__item gallery__item--3" href="../images/gallery3.jpg"></a>
+            </li>
+            <li class="l-col">
+              <a data-fslightbox="gallery" class="gallery__item gallery__item--4" href="../images/gallery4.jpg"></a>
+            </li>
+            <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery5.jpg"></a>
+            <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery6.jpg"></a>
+            <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery7.jpg"></a>
+            <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery8.jpg"></a>
+            <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery9.jpg"></a>
+            <a data-fslightbox="gallery" class="gallery__invisible" href="../images/gallery10.jpg"></a>
+          </ul>
+        </section>
+      </div>
     </div>
     <div class="synopsis">
       <div class="synopsis__inside">
@@ -114,13 +116,14 @@
   <footer id="footer">
     <div class="l-wrapper">
       <div class="footer__inside clearfix">
-        <p>
+        <p class="footer__copyright">
           JOKER and all related characters and elements © & ™ DC Comics. 
           © Warner Bros. Entertainment Inc.
         </p>
       </div>
     </div>
   </footer>
+  <div class="overlay"></div>
   <script src="../js/about.js"></script>
   <script src="../js/fslightbox.min.js"></script>
 </body>

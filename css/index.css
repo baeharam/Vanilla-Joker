@@ -1,11 +1,9 @@
-#main {
-  position: relative;
-  height: 100vh;
+html,body {
   background: url('../images/home.jpg') no-repeat center;
   background-size: cover;
+  height: 100%;
 }
-#main:after {
-  content: " ";
+.overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -13,6 +11,10 @@
   height: 100%;
   background-color: black;
   opacity: 0.2;
+}
+
+.main__inside {
+  height: 80vh;
 }
 .main__inside h1 {
   position: absolute;
@@ -41,6 +43,7 @@
 
 .aside__inside {
   position: absolute;
+  z-index: 2;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -57,3 +60,11 @@
   height: 36px;
 }
 .aside__inside nav ul li a:last-child { margin-right: 0; }
+
+/* Media Query */
+
+@media(max-width: 576px) {
+  .main__inside h1 {
+    font-size: 100px;
+  }
+}

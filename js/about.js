@@ -2,22 +2,13 @@ const initMore = function initMore() {
   const moreBtn = document.querySelector('.intro__synopsis__more');
   const closeBtn = document.querySelector('.synopsis__inside span');
   moreBtn.addEventListener('click', () => {
-    document.getElementById('main').classList.add('overlay');
+    document.getElementById('main').classList.add("more");
   });
   closeBtn.addEventListener('click', () => {
-    document.getElementById('main').classList.remove('overlay');
-  });
-};
-
-const initGallery = function initGallery() {
-  const images = document.querySelectorAll('.gallery__item');
-  images.forEach((image) => {
-    image.addEventListener('mouseenter', () => { image.classList.add('active'); });
-    image.addEventListener('mouseleave', () => { image.classList.remove('active'); });
+    document.getElementById("main").classList.remove("more");
   });
 };
 
 window.onload = () => {
   initMore();
-  initGallery();
 };

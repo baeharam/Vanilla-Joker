@@ -1,5 +1,5 @@
 const inittrailerControl = function inittrailerControl() {
-  const trailerWrapper = document.querySelectorAll('.trailer__video-wrapper');
+  const trailerWrapper = document.querySelectorAll('.trailer__wrapper');
   const playBtns = document.querySelectorAll('.trailer__play');
   const trailers = document.querySelectorAll('.trailer__video');
   playBtns.forEach((btn, index) => {
@@ -17,7 +17,7 @@ const inittrailerControl = function inittrailerControl() {
 };
 
 const initCarousel = function initCarousel() {
-  const trailers = document.querySelectorAll('.trailer__video-wrapper');
+  const trailers = document.querySelectorAll('.trailer__wrapper');
   trailers.forEach((trailer, index) => {
     trailer.addEventListener('click', () => {
       if (trailer.classList.contains('previous')) {

@@ -1,12 +1,9 @@
-#main {
-  position: relative;
-  height: 100vh;
+html,body {
   background: url('../images/about.jpg') no-repeat center;
   background-size: cover;
-  overflow: hidden;
+  height: 100%;
 }
-#main:after {
-  content: " ";
+.overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -15,20 +12,29 @@
   background-color: black;
   opacity: 0.2;
 }
-#main.overlay { overflow: visible; }
-#main.overlay .synopsis__inside,
-#main.overlay .synopsis {
+
+.main__inside {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+#main.more .main__inside { overflow: visible; }
+#main.more .synopsis__inside,
+#main.more .synopsis {
   display: block;
   z-index: 4;
 }
 
 .intro {
   position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
-  left: 5%;
-  top: 15%;
   color: white;
-  width: 600px;
+  float: left;
+  width: 50%;
 }
 .intro__component {
   margin-bottom: 30px;
@@ -54,7 +60,9 @@
 .intro__component.intro__synopsis { animation: 1s fadeInUp 0.9s both; }
 
 .synopsis {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   background-color: black;
   width: 100%;
   height: auto;
@@ -87,8 +95,13 @@
 
 .gallery {
   position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
-  right: 5%;
+  width: 50%;
+  float: right;
+  text-align: center;
   opacity: 0;
   animation: 1s fadeInUpTransform 1.2s both;
 }
@@ -105,7 +118,7 @@
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
-.gallery__item.active {
+.gallery__item:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
 }
