@@ -1,0 +1,93 @@
+/* Variables */
+
+
+html,body { background-color: var(--bg-color); }
+
+.main__inside { padding: 40px 0 0; }
+.main__line {
+  width: 50%;
+  height: 5px;
+  background-color: white;
+  margin: 50px auto;
+}
+
+.score {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.score__component {
+  display: inline-block;
+  margin-right: 50px;
+}
+.score__logo {
+  height: 100px;
+  margin-right: 10px;
+}
+.score__title {
+  display: inline-block;
+  color: white;
+  font-size: 100px;
+  line-height: 1;
+}
+
+.review__component {
+  --border-color: brown;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  border: 5px solid var(--border-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 150px;
+  font-size: 40px;
+}
+.review__contents {
+  position: relative;
+  color: white;
+  font-family: 'IM Fell Double Pica SC', serif;
+}
+.review__contents:before {
+  content: " ";
+  position: absolute;
+  left: 5%;
+  bottom: -16px;
+  width: 150px;
+  border: 6px solid var(--bg-color);
+}
+.review__contents:after {
+  content: " ";
+  position: absolute;
+  left: 4%;
+  bottom: -70px;
+  width: 80px;
+  height: 60px;
+  border: 5px solid var(--border-color);
+  border-radius: 0 50px 0 0;
+  border-left: none;
+  border-bottom: none;
+}
+.review__contents span { color: rgb(248, 234, 31); }
+.review__person,
+.review__source {
+  position: absolute;
+}
+.review__person {
+  left: calc(4% + 120px);
+  color: white;
+  font-size: 0.7em;
+  font-style: italic;
+  bottom: -60px;
+}
+.review__source {
+  display: block;
+  width: 50px;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Media Query */
+@media(max-width: 1200px) {
+  .score__logo { height: 70px; }
+  .score__title { font-size: 70px; }
+}

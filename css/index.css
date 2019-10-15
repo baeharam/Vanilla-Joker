@@ -1,7 +1,6 @@
 html,body {
   background: url('../images/home.jpg') no-repeat center;
   background-size: cover;
-  height: 100%;
 }
 .overlay {
   position: absolute;
