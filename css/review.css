@@ -31,7 +31,7 @@ html,body { background-color: var(--bg-color); }
 }
 
 .review__component {
-  --border-color: brown;
+  --border-color: white;
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -66,7 +66,7 @@ html,body { background-color: var(--bg-color); }
   border-left: none;
   border-bottom: none;
 }
-.review__contents span { color: rgb(248, 234, 31); }
+.review__contents span { color: crimson; }
 .review__person,
 .review__source {
   position: absolute;

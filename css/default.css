@@ -58,6 +58,10 @@ img {
   font-family: 'Abril Fatface';
   src: url('../fonts/AbrilFatface.woff') format('woff');
 }
+@font-face {
+  font-family: 'IM Fell Double Pica SC';
+  src: url('../fonts/IMFellDoublePicaSC.woff') format('woff');
+}
 
 /* Components */
 .header__inside {
