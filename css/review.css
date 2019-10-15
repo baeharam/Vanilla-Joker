@@ -31,7 +31,7 @@ html,body { background-color: var(--bg-color); }
 }
 
 .review__component {
-  --border-color: white;
+  --border-color: rgb(202, 69, 96);
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -40,6 +40,10 @@ html,body { background-color: var(--bg-color); }
   padding: 10px 20px;
   margin-bottom: 150px;
   font-size: 40px;
+  opacity: 0;
+}
+.review__component.active {
+  animation: 1s fadeInLeft 0s both;
 }
 .review__contents {
   position: relative;
@@ -84,6 +88,18 @@ html,body { background-color: var(--bg-color); }
   right: -60px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 /* Media Query */

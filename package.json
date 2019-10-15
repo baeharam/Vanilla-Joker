@@ -21,6 +21,7 @@
   "homepage": "https://github.com/baeharam/Vanilla-Joker#readme",
   "devDependencies": {},
   "dependencies": {
-    "fslightbox": "^2.0.1"
+    "fslightbox": "^2.0.1",
+    "intersection-observer": "^0.7.0"
   }
 }
