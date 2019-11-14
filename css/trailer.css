@@ -23,6 +23,7 @@ body {
   height: 100%;
   transition: all 1s;
   cursor: pointer;
+  border: 3px solid white;
 }
 .trailer__wrapper:after {
   content: " ";

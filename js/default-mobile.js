@@ -6,7 +6,7 @@ const initHeaderFunction = function initHeaderFunction() {
   });
 };
 
-const initHeaderScroll = function initHeaderScroll() {
+const initStickyHeader = function initStickyHeader() {
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
@@ -23,7 +23,7 @@ const preventScroll = function preventScroll() {
 
 window.onload = () => {
   initHeaderFunction();
-  initHeaderScroll();
+  initStickyHeader();
   preventScroll();
 };
 

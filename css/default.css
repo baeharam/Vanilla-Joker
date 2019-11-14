@@ -20,8 +20,9 @@ img {
 
 /* Common */
 .l-wrapper {
-  max-width: 90vw;
+  max-width: 1200px;
   margin: 0 auto;
+  border: 3px solid crimson;
 }
 .l-row:after,
 .clearfix:after{
@@ -40,18 +41,30 @@ img {
   padding: 0 10px;
   margin-bottom: 10px;
 }
+header {
+  border: 3px solid skyblue;
+}
+nav {
+  border: 3px solid blue;
+}
+main {
+  border: 3px solid yellow;
+}
+footer {
+  border: 3px solid steelblue;
+}
 
 /* Fonts */
 @font-face {
-  font-family: Coluna;
+  font-family: 'Coluna';
   src: url('../fonts/Coluna.woff') format('woff');
 }
 @font-face {
-  font-family: Playfair;
+  font-family: 'Playfair';
   src: url('../fonts/PlayfairDisplay.woff') format('woff');
 }
 @font-face {
-  font-family: Anton;
+  font-family: 'Anton';
   src: url('../fonts/Anton.woff') format('woff');
 }
 @font-face {
@@ -71,11 +84,12 @@ img {
   color: white;
   height: 10vh;
 }
-
+.header__inside nav { overflow: hidden; }
 .header__menu {
   position: relative;
   float: right;
   display: block;
+  overflow: hidden;
 }
 .header__menu li { float: left; }
 .header__menu li a {
