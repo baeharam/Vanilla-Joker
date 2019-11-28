@@ -131,7 +131,7 @@ body {
 .gallery__invisible { display: none; }
 
 /* Animation */
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
@@ -155,4 +155,4 @@ body {
     top: 50%;
     transform: translate3d(0, -50%, 0);
   }
-}
+} */

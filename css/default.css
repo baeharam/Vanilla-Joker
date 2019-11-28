@@ -22,7 +22,6 @@ img {
 .l-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  border: 3px solid crimson;
 }
 .l-row:after,
 .clearfix:after{
@@ -40,18 +39,6 @@ img {
   box-sizing: border-box;
   padding: 0 10px;
   margin-bottom: 10px;
-}
-header {
-  border: 3px solid skyblue;
-}
-nav {
-  border: 3px solid blue;
-}
-main {
-  border: 3px solid yellow;
-}
-footer {
-  border: 3px solid steelblue;
 }
 
 /* Fonts */
