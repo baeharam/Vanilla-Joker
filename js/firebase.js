@@ -13,36 +13,69 @@ const db = firebase.firestore();
 
 const FIELD_CONTENT = 'content';
 const FIELD_NAME = 'name';
-const FIELD_FROM = 'from';
+const FIELD_DATE = 'date';
 let comments = [];
 let isFetchDone = false;
 
-const insertComment = () => {
+const insertComment = (comment) => {
   document.querySelector('.loader').style = 'display: none;';
-  const reviewSection = document.querySelector('.review');
-  comments.forEach((comment) => {
-    reviewSection.insertBefore(
-      `<div class="review__component active">
-        <p class="review__contents">
-          ${comment.FIELD_CONTENT}
-        </p>
-        <strong class="review__person">
-          -${comment.FIELD_NAME}
-          <img class="review__source" 
-          src="../images/${comment.FIELD_FROM}.jpg" 
-          alt="${comment.FIELD_FROM} 로고">
-        </strong>
-      </div>`);
+  const reviewForm = document.querySelector('.review__form');
+  reviewForm.insertAdjacentHTML('beforebegin',
+  `<div class="review__component active">
+    <p class="review__contents">
+      ${comment.FIELD_CONTENT}
+    </p>
+    <strong class="review__person">
+      -${comment.FIELD_NAME}, <span class="review__date">${comment.FIELD_DATE}</span>
+    </strong>
+  </div>`);
+};
+
+db.collection('comments').orderBy(FIELD_DATE).onSnapshot((querySnapshot) => {
+
+  const form = document.querySelector('.review__form');
+  const loader = document.querySelector('.review__loader');
+
+  querySnapshot.docChanges().forEach((change) => {
+    const newComment = {};
+    newComment.FIELD_CONTENT = change.doc.get(FIELD_CONTENT);
+    newComment.FIELD_NAME = change.doc.get(FIELD_NAME);
+    const date = change.doc.get(FIELD_DATE);
+    newComment.FIELD_DATE = date ? date.toDate().toLocaleString('en-US') : "";
+    if(newComment.FIELD_DATE !== "") {
+      insertComment(newComment);
+      form.style.display = 'block';
+      loader.style.display = 'none';
+    } else {
+      form.style.display = 'none';
+      loader.style.display = 'block';
+    }
+  });
+});
+
+const writeComment = (name, content) => {
+  db.collection('comments').add({
+    [FIELD_NAME]: name.value,
+    [FIELD_CONTENT]: content.value,
+    [FIELD_DATE]: firebase.firestore.FieldValue.serverTimestamp()
+  }).then(() => {
+    console.log("Successful Insertion of data!!");
+    name.value = content.value = '';
+  }).catch((err) => {
+    console.log("Error is occurred!\n");
+    console.log(err);
   });
 };
 
-db.collection('comments').get().then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    const newComment = {}
-    newComment.FIELD_CONTENT = doc.get(FIELD_CONTENT);
-    newComment.FIELD_NAME = doc.get(FIELD_NAME);
-    newComment.FIELD_FROM = doc.get(FIELD_FROM);
-    comments.push(newComment);
+const addEventToSubmit = () => {
+  const submit = document.getElementById('review__submit');
+  submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    writeComment(
+      document.getElementById('name'), 
+      document.getElementById('review__content')
+    );
   });
-  insertComment();
-});
+};
+
+addEventToSubmit();

@@ -51,12 +51,12 @@
         <hr class="main__line">
         <div class="loader"></div>
         <section class="review">
-          <form>
-            <input type="text" name="name" id="name">
-            <label for="name">name</label>
-            <input type="text" name="name" id="name">
-            <label for="name">name</label>
+          <form class="review__form">
+            <input placeholder="NAME" type="text" name="name" id="name">
+            <button id="review__submit" type="submit">SUBMIT</button>
+            <textarea id="review__content" placeholder="Write your comment"></textarea>
           </form>
+          <div class="loader review__loader"></div>
         </section>
       </div>
     </div>
