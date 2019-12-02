@@ -35,7 +35,6 @@ body {
   color: white;
   float: left;
   width: 50%;
-  border: 3px solid white;
 }
 .intro__component {
   margin-bottom: 30px;
@@ -105,7 +104,6 @@ body {
   text-align: center;
   opacity: 0;
   animation: 1s fadeInUpTransform 1.2s both;
-  border: 3px solid white;
 }
 .gallery__item {
   display: inline-block;
@@ -131,7 +129,7 @@ body {
 .gallery__invisible { display: none; }
 
 /* Animation */
-/* @keyframes fadeInUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
@@ -155,4 +153,4 @@ body {
     top: 50%;
     transform: translate3d(0, -50%, 0);
   }
-} */
+}

@@ -41,7 +41,7 @@ body {
   color: whitesmoke;
 }
 
-.aside__inside { float: left; border: 3px solid orange; }
+.aside__inside { float: left; }
 .aside__nav { float: left; }
 .aside__nav ul li { float: left; }
 .aside__nav ul li a {
