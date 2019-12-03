@@ -9,6 +9,10 @@ const initMore = function initMore() {
   });
 };
 
+const initLoader = () => {
+  
+};
+
 window.onload = () => {
   initMore();
 };
