@@ -3,7 +3,7 @@ const initScrollEffect = function initScrollEffect() {
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if(entry.isIntersecting){
-        entry.target.classList.toggle('active');
+        entry.target.classList.add('active');
         observer.unobserve(entry.target);
       }
     });
