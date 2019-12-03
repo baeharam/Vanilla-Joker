@@ -41,6 +41,10 @@ body {
   color: whitesmoke;
 }
 
+#aside {
+  position: relative;
+  z-index: 2;
+}
 .aside__inside { float: left; }
 .aside__nav { float: left; }
 .aside__nav ul li { float: left; }
