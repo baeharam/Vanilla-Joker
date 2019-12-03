@@ -98,7 +98,10 @@ img {
   background-color: white;
   transition: width 0.5s;
 }
-.header__menu li a:hover:after { width: 100%; }
+.header__menu li a:hover { color: crimson; }
+.header__menu li a:hover:after { width: 100%; background-color: crimson; }
+.header__menu li a.active { color: crimson; }
+.header__menu li a.active:after { width: 100%; background-color: crimson; }
 
 .footer__inside {
   position: relative;
