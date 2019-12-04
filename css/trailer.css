@@ -23,7 +23,6 @@ body {
   height: 100%;
   transition: all 1s;
   cursor: pointer;
-  border: 3px solid white;
 }
 .trailer__wrapper:after {
   content: " ";
@@ -39,6 +38,7 @@ body {
   opacity: 0.5;
   height: 80%;
   top: 50%;
+  filter: grayscale(100%);
 }
 .trailer__wrapper.previous { transform: translate(-105%, -50%); }
 .trailer__wrapper.previous2 { transform: translate(-210%, -50%); }
@@ -49,8 +49,9 @@ body {
   bottom: -5%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 50px;
+  font-size: 70px;
   font-family: 'Anton';
+  text-shadow: burlywood 5px 5px;
   z-index: 4;
   color: white;
 }
