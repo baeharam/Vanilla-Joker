@@ -53,6 +53,8 @@ body {
   opacity: 0.8;
   cursor: pointer;
   font-style: italic;
+  font-weight: bold;
+  color: red;
 }
 .intro__component.intro__director { animation: 1s fadeInUp 0s both; }
 .intro__component.intro__date { animation: 1s fadeInUp 0.3s both; }
