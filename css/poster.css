@@ -16,12 +16,12 @@ body { background-color: black; }
 }
 .poster-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 40%;
+  top: 10%;
   width: 350px;
   height: 550px;
   margin: 0 auto;
+  animation: flipInX 1s 0.5s both;
 }
 .poster-wrapper::before {
   content: ' ';
@@ -37,4 +37,30 @@ body { background-color: black; }
 }
 .poster.active {
   opacity: 1;
+}
+
+@keyframes flipInX {
+  from {
+    transform: perspective(300px) rotate3d(1, 0, 0, 60deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(300px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(300px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(300px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(300px);
+  }
 }
