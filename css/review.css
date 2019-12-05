@@ -1,6 +1,4 @@
 /* Variables */
-
-
 html,body { background-color: var(--bg-color); }
 
 .main__inside { padding: 40px 0 0; }
